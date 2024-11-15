@@ -14,12 +14,46 @@
     },
     "version": "2"
   },
+  "format_on_save": "off",
   "vim_mode": true,
-  "theme": "Tokyo Night",
+  "theme": "Base16 Black Metal (Bathory) Dark",
+  "buffer_font_size": 12,
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font",
+  "ui_font_size": 12,
+  "relative_line_numbers": true,
+  "scrollbar": {
+    "show": "never"
+  },
+  "vertical_scroll_margin": 0,
+  "vim": {
+    "use_system_clipboard": "always",
+    "use_multiline_find": true
+  },
+  "tab_bar": {
+    "show": false
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": false
+  },
+  "preferred_line_length": 100,
+  "soft_wrap": "preferred_line_length",
+  "working_directory": "current_project_directory",
+  "button": false,
   "language_models": {
     "anthropic": {
       "version": "1"
     }
+  },
+  "project_panel": {
+    "button": false,
+    "auto_fold_dirs": false,
+    "scrollbar": {
+      "show": "never"
+    }
+  },
+  "outline_panel": {
+    "button": false
   },
   "formatter": {
     "language_server": {
@@ -54,10 +88,10 @@
     },
     "preferred_line_length": 100,
     "soft_wrap": "preferred_line_length",
-    "use_autoclose": false,
+    "use_autoclose": true,
     "git": {
       "inline_blame": {
-        "enabled": false,
+        "enabled": true,
         "delay_ms": 500
       }
     },
@@ -104,7 +138,10 @@
       "formatter": {
         "external": {
           "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
+          "arguments": [
+            "--stdin-filepath",
+            "{buffer_path}"
+          ]
         }
       },
       "format_on_save": "on"
@@ -125,7 +162,9 @@
     "eslint": {
       "settings": {
         "codeActionOnSave": {
-          "rules": ["import/order"]
+          "rules": [
+            "import/order"
+          ]
         }
       }
     }
@@ -135,8 +174,15 @@
   },
   // File syntax highlighting
   "file_types": {
-    "Dockerfile": ["Dockerfile", "Dockerfile.*"],
-    "JSON": ["json", "jsonc", "*.code-snippets"]
+    "Dockerfile": [
+      "Dockerfile",
+      "Dockerfile.*"
+    ],
+    "JSON": [
+      "json",
+      "jsonc",
+      "*.code-snippets"
+    ]
   },
   // File scan exclusions, hide on the file explorer and search
   "file_scan_exclusions": [
