@@ -6,16 +6,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "edit_predictions": {
-    "disabled_globs": [],
-    "mode": "subtle",
-    "copilot": {
-      "proxy": null,
-      "proxy_no_verify": null
-    },
-    "enabled_in_text_threads": false
-  },
-  "agent": {
+  "assistant": {
     "default_model": {
       "provider": "anthropic",
       "model": "claude-3-7-sonnet-latest"
@@ -80,9 +71,10 @@
     }
   },
   "features": {
+    "copilot": true,
     "theme": "macOS Classic Dark",
     "buffer_font_size": 14,
-    "edit_prediction_provider":"copilot",
+    "inline_completion_provider": "copilot",
     "buffer_font_family": "CommitMono Nerd Font",
     "vim_mode": true,
     "cursor_blink": false,
@@ -163,25 +155,6 @@
         }
       },
       "format_on_save": "on"
-    },
-    "Python": {
-      "language_servers": ["ruff"],
-      "format_on_save": "on",
-      "formatter": [
-        {
-          "language_server": {
-            "name": "ruff"
-          }
-        },
-        {
-          "code_actions": {
-            // Fix all auto-fixable lint violations
-            "source.fixAll.ruff": true,
-            // Organize imports
-            "source.organizeImports.ruff": true
-          }
-        }
-      ]
     }
   },
   "lsp": {
@@ -208,16 +181,6 @@
           "rules": [
             "import/order"
           ]
-        }
-      }
-    },
-    "ruff": {
-     "initialization_options": {
-        "settings": {
-          "lineLength": 80,
-          "lint": {
-            "extendSelect": ["I"]
-          }
         }
       }
     }
